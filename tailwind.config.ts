@@ -5,14 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0c0a09",
-        noir: "#15110f",
-        coal: "#1e1916",
-        ivory: "#f3ece0",
-        beige: "#e4d6c1",
-        sand: "#b9a68c",
-        champagne: { DEFAULT: "#c9a97a", light: "#dcc39b", deep: "#a88552" },
-        smoke: "#8d8378",
+        // Light, high-contrast theme.
+        // "ink" = page background, "ivory" = main text (names kept so components stay simple).
+        ink: "#fbf8f3",        // warm cream background
+        noir: "#f3ede3",       // alternate section background
+        coal: "#e8dfd1",       // card / image placeholder
+        ivory: "#141110",      // primary text (near-black)
+        beige: "#3b332c",      // body text (dark espresso)
+        sand: "#5e5245",       // labels
+        champagne: { DEFAULT: "#85642f", light: "#a07c42", deep: "#e0c48f" }, // deep gold accent; "deep" = gold for dark band
+        smoke: "#655b51",      // muted text (still AA on cream)
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],

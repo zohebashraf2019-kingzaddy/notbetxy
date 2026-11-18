@@ -8,6 +8,7 @@ import { PREFILL_EVENT, type PrefillDetail } from "@/lib/prefill";
 import SectionHeading from "./SectionHeading";
 import Reveal, { ease } from "./Reveal";
 import { ArrowIcon, InstagramIcon } from "./Icons";
+import SocialLinks from "./SocialLinks";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -95,7 +96,7 @@ export default function Inquiry() {
   });
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative border-t border-ivory/10 bg-noir py-24 md:py-36">
+    <section id="contact" aria-labelledby="contact-title" className="relative border-t border-ivory/20 bg-noir py-24 md:py-36">
       <div className="mx-auto grid max-w-7xl gap-16 px-5 md:px-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <SectionHeading
@@ -115,12 +116,12 @@ export default function Inquiry() {
                 <span className="font-serif text-2xl italic text-champagne">{s.n}</span>
                 <div>
                   <p className="font-serif text-xl">{s.t}</p>
-                  <p className="mt-1 text-sm text-beige/70">{s.d}</p>
+                  <p className="mt-1 text-sm text-beige">{s.d}</p>
                 </div>
               </div>
             ))}
           </Reveal>
-          <Reveal delay={0.2} className="mt-12 border-t border-ivory/10 pt-8 text-sm text-beige/70">
+          <Reveal delay={0.2} className="mt-12 border-t border-ivory/20 pt-8 text-sm text-beige">
             <p className="eyebrow mb-3">Prefer to message?</p>
             {site.contactEmail && (
               <a href={`mailto:${site.contactEmail}`} className="link-underline block text-ivory">{site.contactEmail}</a>
@@ -128,11 +129,12 @@ export default function Inquiry() {
             <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className="link-underline mt-2 inline-flex items-center gap-2 text-ivory">
               <InstagramIcon className="h-3.5 w-3.5" /> DM @notbetxy for promos & collabs 💌
             </a>
+            <SocialLinks className="mt-6" />
           </Reveal>
         </div>
 
         <Reveal delay={0.1} className="lg:col-span-7">
-          <div className="relative border border-ivory/10 bg-ink p-6 sm:p-10">
+          <div className="relative border border-ivory/20 bg-ink p-6 sm:p-10">
             <AnimatePresence mode="wait">
               {status === "success" ? (
                 <motion.div
@@ -149,7 +151,7 @@ export default function Inquiry() {
                   <p className="mx-auto mt-6 max-w-md font-serif text-2xl leading-snug">
                     Thank you for reaching out! Your collaboration inquiry has been received. I&apos;ll review your details and get back to you as soon as possible. 💌
                   </p>
-                  <p className="mt-6 text-sm text-beige/60">— Betxy w/ an X</p>
+                  <p className="mt-6 text-sm text-beige">— Betxy w/ an X</p>
                   <button type="button" onClick={() => { setStatus("idle"); startedAt.current = Date.now(); }} className="btn-line mt-10">
                     Send another inquiry
                   </button>
@@ -228,12 +230,12 @@ export default function Inquiry() {
                     <textarea {...aria("description")} rows={5} className="field resize-y" value={v.description} onChange={(e) => set("description", e.target.value)} placeholder="Tell Betxy about your brand, goals, and the content you have in mind…" />
                     <div className="flex justify-between">
                       {err("description") ?? <span />}
-                      <span className="mt-2 text-[11px] text-smoke">{v.description.length}/3000</span>
+                      <span className="mt-2 text-[12px] text-smoke">{v.description.length}/3000</span>
                     </div>
                   </div>
 
                   <div className="sm:col-span-2">
-                    <label className="flex cursor-pointer items-start gap-3 text-sm text-beige/75">
+                    <label className="flex cursor-pointer items-start gap-3 text-sm text-beige">
                       <input
                         type="checkbox"
                         name="consent"
@@ -251,7 +253,7 @@ export default function Inquiry() {
                   </div>
 
                   {status === "error" && serverError && (
-                    <p role="alert" className="border border-[#e7a08f]/40 bg-[#e7a08f]/10 px-4 py-3 text-sm text-[#f0c2b6] sm:col-span-2">
+                    <p role="alert" className="border border-[#a3341f]/40 bg-[#a3341f]/10 px-4 py-3 text-sm text-[#8a2c19] sm:col-span-2">
                       {serverError}
                     </p>
                   )}

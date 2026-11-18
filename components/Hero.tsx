@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { site } from "@/content/site";
 import { media } from "@/content/media";
 import { InstagramIcon, Sparkle } from "./Icons";
+import SocialLinks from "./SocialLinks";
 import { ease } from "./Reveal";
 
 const letters = "NOTBETXY".split("");
@@ -41,9 +42,9 @@ export default function Hero() {
             className="object-cover object-[50%_20%]"
           />
         </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/10 lg:bg-gradient-to-r lg:from-ink lg:via-ink/20 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/20 lg:bg-gradient-to-r lg:from-ink lg:via-ink/20 lg:to-transparent" />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/80 to-transparent" />
-        <p className="absolute bottom-8 right-6 hidden font-serif text-xs italic text-ivory/60 lg:block">
+        <p className="absolute bottom-8 right-6 hidden font-serif text-xs italic text-ivory/80 lg:block">
           Fig. 01 — Betxy w/ an X
         </p>
       </motion.div>
@@ -60,8 +61,8 @@ export default function Hero() {
           className="eyebrow flex flex-wrap items-center gap-x-3 gap-y-1"
         >
           <span>Latina</span><Sparkle className="h-2.5 w-2.5" /><span>Mexicana</span>
-          <span className="text-ivory/30">/</span><span>Entrepreneur</span>
-          <span className="text-ivory/30">/</span><span>Digital Creator</span>
+          <span className="text-ivory/80">/</span><span>Entrepreneur</span>
+          <span className="text-ivory/80">/</span><span>Digital Creator</span>
         </motion.p>
 
         <h1 id="hero-title" className="mt-5 font-serif font-light leading-[0.82] tracking-[-0.02em]">
@@ -97,7 +98,7 @@ export default function Hero() {
           className="mt-8 max-w-xl"
         >
           <p className="font-serif text-2xl italic leading-snug text-ivory md:text-3xl">{site.tagline}</p>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-beige/80">{site.description}</p>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-beige">{site.description}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a href="#collaborations" className="btn-solid">Work With Me</a>
@@ -106,6 +107,7 @@ export default function Hero() {
               Let&apos;s Collaborate <span aria-hidden>→</span>
             </a>
           </div>
+          <SocialLinks variant="pills" className="mt-7" />
         </motion.div>
       </motion.div>
 
@@ -117,7 +119,7 @@ export default function Hero() {
         href={site.socials.instagram}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute left-5 top-1/2 z-20 hidden -translate-y-1/2 items-center gap-3 text-[10px] uppercase tracking-[0.3em] text-ivory/60 transition hover:text-champagne xl:flex"
+        className="absolute left-5 top-1/2 z-20 hidden -translate-y-1/2 items-center gap-3 text-[12px] uppercase tracking-[0.2em] text-ivory/80 transition hover:text-champagne xl:flex"
         style={{ writingMode: "vertical-rl" }}
         aria-label="Instagram @notbetxy (opens in new tab)"
       >
@@ -128,7 +130,7 @@ export default function Hero() {
       <a
         href="#about"
         aria-label="Scroll to About"
-        className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[9px] uppercase tracking-[0.35em] text-ivory/60"
+        className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-3 text-[12px] uppercase tracking-[0.22em] text-ivory/80"
       >
         <span className="relative h-10 w-px overflow-hidden bg-ivory/15">
           <span className="absolute left-0 top-0 h-3 w-px animate-scrolldot bg-champagne" />

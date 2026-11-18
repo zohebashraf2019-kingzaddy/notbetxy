@@ -67,7 +67,7 @@ export default function MediaKit() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-px border border-ivory/10 bg-ivory/10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-px border border-ivory/20 bg-ivory/10 md:grid-cols-2 lg:grid-cols-3">
           <Block title="Creator Introduction" n="i">
             <p>
               Betxy w/ an X is a {site.identity} entrepreneur and digital creator sharing lifestyle, fashion, travel and
@@ -78,13 +78,13 @@ export default function MediaKit() {
           <Block title="Instagram Audience Overview" n="ii">
             <p className="font-serif text-5xl font-light text-champagne">{site.followers.instagram}</p>
             <p className="mt-1">followers on Instagram (@notbetxy)</p>
-            <p className="mt-3 text-xs text-smoke">Supplied snapshot, {site.followers.asOf}. Detailed audience insights are shared directly with partners on request.</p>
+            <p className="mt-3 text-sm text-smoke">Supplied snapshot, {site.followers.asOf}. Detailed audience insights are shared directly with partners on request.</p>
           </Block>
 
           <Block title="Content Categories" n="iii">
             <ul className="flex flex-wrap gap-2">
               {[...categories, "Travel"].map((c) => (
-                <li key={c} className="border border-ivory/15 px-3 py-1.5 text-[10.5px] uppercase tracking-[0.2em] text-ivory/80">
+                <li key={c} className="border border-ivory/20 px-3 py-1.5 text-[12px] uppercase tracking-[0.2em] text-ivory/80">
                   {c}
                 </li>
               ))}
@@ -103,7 +103,7 @@ export default function MediaKit() {
 
           <Block title="Featured Past Work" n="v">
             <p>Selected collaborations are curated in The Collaboration Edit.</p>
-            <a href="#portfolio" className="link-underline mt-4 inline-flex items-center gap-2 text-[10.5px] uppercase tracking-[0.24em] text-ivory">
+            <a href="#portfolio" className="link-underline mt-4 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.2em] text-ivory">
               View the Edit <ArrowIcon />
             </a>
           </Block>
@@ -114,7 +114,7 @@ export default function MediaKit() {
             ) : (
               <p>Use the inquiry form below, or DM on Instagram for promos & collabs. 💌</p>
             )}
-            <a href="#contact" className="link-underline mt-4 inline-flex items-center gap-2 text-[10.5px] uppercase tracking-[0.24em] text-ivory">
+            <a href="#contact" className="link-underline mt-4 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.2em] text-ivory">
               Send an inquiry <ArrowIcon />
             </a>
           </Block>
@@ -129,9 +129,9 @@ function Block({ title, n, children }: { title: string; n: string; children: Rea
     <Reveal className="bg-ink p-8 md:p-10">
       <div className="flex items-baseline justify-between">
         <h3 className="eyebrow">{title}</h3>
-        <span className="font-serif text-sm italic text-ivory/30">{n}.</span>
+        <span className="font-serif text-sm italic text-ivory/80">{n}.</span>
       </div>
-      <div className="mt-6 text-[15px] leading-relaxed text-beige/80">{children}</div>
+      <div className="mt-6 text-[15px] leading-relaxed text-beige">{children}</div>
     </Reveal>
   );
 }

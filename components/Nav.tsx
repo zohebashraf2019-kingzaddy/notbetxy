@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { nav, site } from "@/content/site";
 import { media } from "@/content/media";
 import { InstagramIcon } from "./Icons";
+import SocialLinks from "./SocialLinks";
 import { ease } from "./Reveal";
 
 export default function Nav() {
@@ -28,19 +29,19 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
-        scrolled && !open ? "border-b border-ivory/10 bg-ink/75 backdrop-blur-xl" : "bg-transparent"
+        scrolled && !open ? "border-b border-ivory/20 bg-ink/75 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
       <nav aria-label="Primary" className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:px-10">
         <a href="#top" className="flex items-center gap-3" aria-label="NOTBETXY home" onClick={() => setOpen(false)}>
-          <Image src={media.monogram} alt="" className="h-9 w-auto" priority />
-          <span className="font-serif text-lg tracking-[0.3em]">NOTBETXY</span>
+          <Image src={media.monogramInk} alt="" className="h-9 w-auto" priority />
+          <span className="font-serif text-lg tracking-[0.2em]">NOTBETXY</span>
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
           {nav.slice(1, 5).map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="link-underline text-[11px] uppercase tracking-[0.26em] text-ivory/80 hover:text-ivory">
+              <a href={l.href} className="link-underline text-[12px] uppercase tracking-[0.2em] text-ivory/80 hover:text-ivory">
                 {l.label}
               </a>
             </li>
@@ -95,7 +96,7 @@ export default function Nav() {
                     onClick={() => setOpen(false)}
                     className="group flex items-baseline gap-4 py-1 font-serif text-[2.6rem] font-light leading-tight"
                   >
-                    <span className="font-sans text-[10px] tracking-[0.3em] text-champagne">0{i + 1}</span>
+                    <span className="font-sans text-[12px] tracking-[0.2em] text-champagne">0{i + 1}</span>
                     <span className="transition group-hover:italic group-hover:text-champagne">{l.label}</span>
                   </a>
                 </motion.li>
@@ -103,9 +104,7 @@ export default function Nav() {
             </ul>
             <div className="space-y-6">
               <p className="font-script text-3xl text-champagne">{site.motto}</p>
-              <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer" className="btn-line w-full">
-                <InstagramIcon /> Follow @notbetxy
-              </a>
+              <SocialLinks />
             </div>
           </motion.div>
         )}

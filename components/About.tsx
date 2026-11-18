@@ -42,7 +42,7 @@ export default function About() {
             />
           </Reveal>
           <Reveal delay={0.35} className="absolute -left-1 top-0 hidden md:block">
-            <span className="eyebrow block whitespace-nowrap text-ivory/50 [writing-mode:vertical-rl] rotate-180">Est. with purpose</span>
+            <span className="eyebrow block whitespace-nowrap text-ivory/80 [writing-mode:vertical-rl] rotate-180">Est. with purpose</span>
           </Reveal>
         </div>
 
@@ -59,7 +59,7 @@ export default function About() {
             }
           />
 
-          <Reveal delay={0.1} className="mt-10 space-y-5 text-[16px] leading-[1.85] text-beige/85">
+          <Reveal delay={0.1} className="mt-10 space-y-5 text-[16px] leading-[1.85] text-beige">
             <p className="font-serif text-3xl italic text-ivory">Hey, I&apos;m Betxy! ✨</p>
             <p>
               <span className="float-left mr-3 mt-1 font-serif text-6xl leading-[0.8] text-champagne">A</span>
@@ -75,7 +75,7 @@ export default function About() {
             <p>I&apos;m taking life head on, one day at a time, and I&apos;m excited to see where this journey takes me.</p>
           </Reveal>
 
-          <Reveal delay={0.2} className="mt-12 grid gap-px border border-ivory/10 bg-ivory/10 sm:grid-cols-2">
+          <Reveal delay={0.2} className="mt-12 grid gap-px border border-ivory/20 bg-ivory/10 sm:grid-cols-2">
             <figure className="bg-ink p-7">
               <p className="eyebrow">The Motto</p>
               <blockquote className="mt-3 font-serif text-3xl">Purpose &gt; Popularity</blockquote>
@@ -90,7 +90,7 @@ export default function About() {
 
           <Reveal delay={0.3} className="mt-8 flex flex-wrap gap-2">
             {[site.identity, ...site.roles].map((r) => (
-              <span key={r} className="flex items-center gap-2 border border-ivory/15 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-ivory/75">
+              <span key={r} className="flex items-center gap-2 border border-ivory/20 px-4 py-2 text-[12px] uppercase tracking-[0.2em] text-ivory/80">
                 <Sparkle className="h-2 w-2 text-champagne" /> {r}
               </span>
             ))}

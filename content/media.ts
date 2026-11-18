@@ -14,6 +14,8 @@ import beachKneel from "@/public/images/beach-kneel.jpg";
 import riverRaft from "@/public/images/river-raft.jpg";
 import logo from "@/public/images/logo-ivory.png";
 import monogram from "@/public/images/monogram-ivory.png";
+import logoInk from "@/public/images/logo-ink.png";
+import monogramInk from "@/public/images/monogram-ink.png";
 
 export const media = {
   heroRed,
@@ -32,6 +34,8 @@ export const media = {
   riverRaft,
   logo,
   monogram,
+  logoInk,
+  monogramInk,
 };
 
 /** "Life Through My Lens" gallery — swap or reorder freely. */

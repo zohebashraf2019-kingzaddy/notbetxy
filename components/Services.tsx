@@ -25,7 +25,7 @@ export default function Services() {
               intro="Your brand has a story. Let's make sure people see it."
             />
           </div>
-          <Reveal delay={0.15} className="max-w-xs text-sm leading-relaxed text-ink/60 lg:text-right">
+          <Reveal delay={0.15} className="max-w-xs text-sm leading-relaxed text-ink/80 lg:text-right">
             Every collaboration is tailored. Final scope, availability, and pricing are discussed directly with Betxy.
           </Reveal>
         </div>
@@ -51,7 +51,7 @@ export default function Services() {
                   <span className="font-serif text-5xl font-light italic text-champagne-deep transition-colors duration-700 group-hover:text-champagne">
                     {s.numeral}
                   </span>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-ink/40 transition-colors duration-700 group-hover:text-ivory/40">
+                  <span className="text-[12px] uppercase tracking-[0.2em] text-ink/80 transition-colors duration-700 group-hover:text-ivory/80">
                     0{i + 1} / 06
                   </span>
                 </span>
@@ -59,10 +59,10 @@ export default function Services() {
                   <span className="block font-serif text-3xl leading-tight transition-colors duration-700 group-hover:text-ivory">
                     {s.title}
                   </span>
-                  <span className="mt-4 block text-[14.5px] leading-relaxed text-ink/65 transition-colors duration-700 group-hover:text-beige/80">
+                  <span className="mt-4 block text-[14.5px] leading-relaxed text-ink/80 transition-colors duration-700 group-hover:text-beige">
                     {s.body}
                   </span>
-                  <span className="mt-7 flex items-center gap-3 text-[10.5px] uppercase tracking-[0.28em] text-ink transition-colors duration-700 group-hover:text-champagne">
+                  <span className="mt-7 flex items-center gap-3 text-[12px] uppercase tracking-[0.2em] text-ink transition-colors duration-700 group-hover:text-champagne">
                     Inquire <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1.5" />
                   </span>
                 </span>

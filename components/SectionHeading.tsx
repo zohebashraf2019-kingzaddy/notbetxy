@@ -23,7 +23,7 @@ export default function SectionHeading({ number, kicker, title, intro, align = "
       <h2 id={id} className={`display mt-6 ${light ? "text-ink" : ""} text-[2.6rem] sm:text-6xl lg:text-7xl`}>
         {title}
       </h2>
-      {intro && <p className={`mt-6 max-w-xl text-base leading-relaxed md:text-lg ${light ? "text-ink/70" : "text-beige/80"}`}>{intro}</p>}
+      {intro && <p className={`mt-6 max-w-xl text-base leading-relaxed md:text-lg ${light ? "text-ink/85" : "text-beige"}`}>{intro}</p>}
     </Reveal>
   );
 }

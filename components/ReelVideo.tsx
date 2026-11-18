@@ -45,7 +45,7 @@ export default function ReelVideo({ src, poster, caption, tag, href }: Props) {
         aria-label={`Reel: ${caption}`}
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/90 via-transparent to-ink/30" />
-      <div className="absolute left-4 top-4 flex items-center gap-2 bg-ink/60 px-3 py-1.5 text-[10px] uppercase tracking-[0.24em] text-champagne backdrop-blur">
+      <div className="absolute left-4 top-4 flex items-center gap-2 bg-ink/60 px-3 py-1.5 text-[12px] uppercase tracking-[0.2em] text-champagne backdrop-blur">
         <span className="h-1.5 w-1.5 rounded-full bg-champagne" /> Reel
       </div>
       <button
@@ -63,7 +63,7 @@ export default function ReelVideo({ src, poster, caption, tag, href }: Props) {
       <figcaption className="absolute inset-x-0 bottom-0 p-5">
         {tag && <p className="eyebrow">{tag}</p>}
         <p className="mt-2 font-serif text-xl italic leading-snug">&ldquo;{caption}&rdquo;</p>
-        <a href={href} target="_blank" rel="noopener noreferrer" className="link-underline mt-3 inline-block text-[10.5px] uppercase tracking-[0.24em] text-ivory/80">
+        <a href={href} target="_blank" rel="noopener noreferrer" className="link-underline mt-3 inline-block text-[12px] uppercase tracking-[0.2em] text-ivory/80">
           Watch more Reels
         </a>
       </figcaption>

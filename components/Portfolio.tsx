@@ -41,8 +41,8 @@ export default function Portfolio() {
                 key={f}
                 aria-pressed={active === f}
                 onClick={() => setActive(f)}
-                className={`relative shrink-0 border px-5 py-2.5 text-[10.5px] uppercase tracking-[0.24em] transition-colors duration-500 ${
-                  active === f ? "border-champagne text-ink" : "border-ivory/15 text-ivory/70 hover:border-ivory/40 hover:text-ivory"
+                className={`relative shrink-0 border px-5 py-2.5 text-[12px] uppercase tracking-[0.2em] transition-colors duration-500 ${
+                  active === f ? "border-champagne text-ink" : "border-ivory/20 text-ivory/80 hover:border-ivory/40 hover:text-ivory"
                 }`}
               >
                 {active === f && (
@@ -73,7 +73,7 @@ export default function Portfolio() {
         </motion.ul>
 
         {items.length === 0 && (
-          <p className="mt-14 text-center font-serif text-2xl italic text-beige/70">New {active.toLowerCase()} features coming soon.</p>
+          <p className="mt-14 text-center font-serif text-2xl italic text-beige">New {active.toLowerCase()} features coming soon.</p>
         )}
       </div>
     </section>
@@ -94,17 +94,17 @@ function ProjectCard({ c }: { c: Collaboration }) {
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
       <div className="absolute inset-x-0 top-0 flex items-center justify-between p-6">
-        <span className="bg-ink/60 px-3 py-1.5 text-[10px] uppercase tracking-[0.24em] text-champagne backdrop-blur">{c.category}</span>
+        <span className="bg-ink/60 px-3 py-1.5 text-[12px] uppercase tracking-[0.2em] text-champagne backdrop-blur">{c.category}</span>
         {c.logo && <Image src={c.logo} alt={`${c.brand} logo`} width={72} height={32} className="h-8 w-auto object-contain" />}
       </div>
       <div className="absolute inset-x-0 bottom-0 p-6">
         <p className="eyebrow">{c.brand}{c.format ? ` · ${c.format}` : ""}</p>
         <h3 className="mt-2 font-serif text-3xl leading-tight">{c.title}</h3>
-        <p className="mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-beige/80 opacity-0 transition-all duration-700 group-hover:max-h-32 group-hover:opacity-100">
+        <p className="mt-3 max-h-0 overflow-hidden text-sm leading-relaxed text-beige opacity-0 transition-all duration-700 group-hover:max-h-32 group-hover:opacity-100">
           {c.description}
         </p>
         {c.postUrl && (
-          <span className="mt-4 inline-flex items-center gap-2 text-[10.5px] uppercase tracking-[0.24em] text-ivory/80">
+          <span className="mt-4 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.2em] text-ivory/80">
             View on Instagram <ArrowUpRight />
           </span>
         )}
@@ -122,16 +122,16 @@ function ProjectCard({ c }: { c: Collaboration }) {
 
 function PlaceholderCard({ c }: { c: Collaboration }) {
   return (
-    <article className="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden border border-ivory/10 bg-gradient-to-br from-coal via-noir to-ink p-7">
+    <article className="group relative flex aspect-[4/5] flex-col justify-between overflow-hidden border border-ivory/20 bg-gradient-to-br from-coal via-noir to-ink p-7">
       <Image
-        src={media.monogram}
+        src={media.monogramInk}
         alt=""
         aria-hidden
         className="pointer-events-none absolute -right-8 top-1/2 w-[70%] -translate-y-1/2 opacity-[0.05] transition duration-[1.2s] group-hover:scale-110 group-hover:opacity-[0.09]"
       />
       <div className="relative flex items-center justify-between">
-        <span className="border border-champagne/40 px-3 py-1.5 text-[10px] uppercase tracking-[0.24em] text-champagne">{c.category}</span>
-        <span className="font-serif text-xs italic text-ivory/40">Reserved</span>
+        <span className="border border-champagne/40 px-3 py-1.5 text-[12px] uppercase tracking-[0.2em] text-champagne">{c.category}</span>
+        <span className="font-serif text-xs italic text-ivory/80">Reserved</span>
       </div>
       <div className="relative">
         <p className="eyebrow text-sand">{c.format}</p>
@@ -139,11 +139,11 @@ function PlaceholderCard({ c }: { c: Collaboration }) {
           {c.title}
           <span className="block italic text-champagne">— {c.brand}</span>
         </h3>
-        <p className="mt-4 text-sm leading-relaxed text-beige/70">{c.description}</p>
+        <p className="mt-4 text-sm leading-relaxed text-beige">{c.description}</p>
         <button
           type="button"
           onClick={() => openInquiry({ type: "Brand Partnership", message: `I'd love to be featured in The Collaboration Edit (${c.category}). ` })}
-          className="mt-6 inline-flex items-center gap-3 text-[10.5px] uppercase tracking-[0.26em] text-ivory transition hover:text-champagne"
+          className="mt-6 inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.2em] text-ivory transition hover:text-champagne"
         >
           Feature your brand <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-500 group-hover:translate-x-1.5" />
         </button>

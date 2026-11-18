@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         <h1 className="display mt-8 text-5xl md:text-7xl">Privacy <span className="italic text-champagne">Policy</span></h1>
         <p className="mt-4 text-sm text-smoke">Last updated: November 2026</p>
 
-        <div className="mt-12 space-y-10 text-[15.5px] leading-[1.85] text-beige/85 [&_h2]:mb-3 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-ivory">
+        <div className="mt-12 space-y-10 text-[15.5px] leading-[1.85] text-beige [&_h2]:mb-3 [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:text-ivory">
           <section>
             <h2>Overview</h2>
             <p>This website is operated by NOTBETXY (Betxy w/ an X). We respect your privacy and collect only the information needed to respond to collaboration inquiries.</p>
