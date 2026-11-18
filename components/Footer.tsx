@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/content/site";
 import { media } from "@/content/media";
+import { beautyBar } from "@/content/beautyBar";
 import SocialLinks, { socialLinks } from "./SocialLinks";
 
 const links = [
@@ -9,6 +10,7 @@ const links = [
   { label: "About", href: "/#about" },
   { label: "Collaborations", href: "/#collaborations" },
   { label: "Portfolio", href: "/#portfolio" },
+  { label: "Beauty Bar", href: "/#beauty-bar" },
   { label: "Media Kit", href: "/#media-kit" },
   { label: "Contact", href: "/#contact" },
 ];
@@ -39,6 +41,16 @@ export default function Footer() {
           <div className="lg:col-span-3 lg:text-right">
             <p className="eyebrow">Follow along</p>
             <SocialLinks className="mt-5 lg:justify-end" />
+            {beautyBar.enabled && (
+              <div className="mt-8">
+                <p className="eyebrow">{beautyBar.name}</p>
+                <p className="mt-2 text-sm text-beige">{beautyBar.address.line1}, {beautyBar.address.line2}</p>
+                <div className="mt-3 flex gap-4 text-sm lg:justify-end">
+                  <a href={beautyBar.links.book} target="_blank" rel="noopener noreferrer" className="link-underline text-champagne">Book Now</a>
+                  <a href={beautyBar.links.instagram} target="_blank" rel="noopener noreferrer" className="link-underline text-ivory/80">{beautyBar.instagramHandle}</a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

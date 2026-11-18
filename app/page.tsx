@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Social from "@/components/Social";
+import BeautyBar from "@/components/BeautyBar";
 import MediaKit from "@/components/MediaKit";
 import Inquiry from "@/components/Inquiry";
 import Footer from "@/components/Footer";
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Portfolio />
         <Social />
+        <BeautyBar />
         <MediaKit />
         <Inquiry />
       </main>

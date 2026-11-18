@@ -43,6 +43,7 @@ Redeploy after adding variables. Until the three Resend variables are set, the f
 | Text, socials, follower snapshot, media kit PDF | `content/site.ts` |
 | Portfolio (The Collaboration Edit) and Instagram embeds | `content/collaborations.ts` |
 | Photos, gallery order, self-hosted Reels | `content/media.ts` + `public/images`, `public/video` |
+| Betxy's Beauty Bar (menu, hours, policy, booking links; `enabled` toggle) | `content/beautyBar.ts` |
 | Privacy policy | `app/privacy/page.tsx` |
 
 ### Add a collaboration
@@ -63,6 +64,7 @@ Put `media-kit.pdf` in `/public` and set `mediaKitPdf: "/media-kit.pdf"` in `con
 - [ ] Set up Resend and send a test inquiry
 - [ ] Replace the placeholder portfolio cards with real, approved collaborations
 - [ ] Have Betxy approve the photos and copy
+- [ ] Confirm the Beauty Bar menu, hours and booking link are current
 
 ## Integrity rules
 Don't add engagement rates, demographics, impressions, rates, testimonials or past partnerships unless Betxy supplies and approves them.

@@ -12,7 +12,7 @@ export const site = {
   motto: "Purpose > Popularity",
   philosophy: "Social media is an illusion, stay curious.",
   identity: "Latina ✨ Mexicana",
-  roles: ["Entrepreneur", "Digital Creator", "Social Media Personality", "Brand Collaborator"],
+  roles: ["Entrepreneur", "Licensed Esthetician", "Digital Creator", "Social Media Personality", "Brand Collaborator"],
   description:
     "Latina creator, entrepreneur, and storyteller. Bringing authenticity, creativity, and personality to every collaboration. I partner with brands and businesses to create content that connects, inspires, and leaves a lasting impression.",
 
@@ -40,6 +40,7 @@ export const nav = [
   { label: "About", href: "#about" },
   { label: "Collaborations", href: "#collaborations" },
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Beauty Bar", href: "#beauty-bar" },
   { label: "Media Kit", href: "#media-kit" },
   { label: "Contact", href: "#contact" },
 ] as const;

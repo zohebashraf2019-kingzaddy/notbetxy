@@ -25,7 +25,7 @@ export default function MediaKit() {
           <div className="lg:col-span-7">
             <SectionHeading
               id="mediakit-title"
-              number="05"
+              number="06"
               kicker="Media Kit"
               title={
                 <>
@@ -71,7 +71,7 @@ export default function MediaKit() {
           <Block title="Creator Introduction" n="i">
             <p>
               Betxy w/ an X is a {site.identity} entrepreneur and digital creator sharing lifestyle, fashion, travel and
-              everyday moments with a voice that&apos;s confident, authentic and culturally proud.
+              everyday moments with a voice that&apos;s confident, authentic and culturally proud. She&apos;s also a licensed esthetician and the owner of Betxy&apos;s Beauty Bar in Midtown Reno.
             </p>
           </Block>
 

@@ -88,6 +88,16 @@ export default function About() {
             </figure>
           </Reveal>
 
+          <Reveal delay={0.25} className="mt-8">
+            <a href="#beauty-bar" className="group flex items-center justify-between gap-4 border border-ivory/20 bg-noir p-5 transition hover:border-champagne">
+              <span>
+                <span className="eyebrow block">Owner &amp; Licensed Esthetician</span>
+                <span className="mt-1 block font-serif text-2xl">Betxy&apos;s Beauty Bar — Midtown Reno</span>
+              </span>
+              <span aria-hidden className="text-2xl text-champagne transition group-hover:translate-x-1">→</span>
+            </a>
+          </Reveal>
+
           <Reveal delay={0.3} className="mt-8 flex flex-wrap gap-2">
             {[site.identity, ...site.roles].map((r) => (
               <span key={r} className="flex items-center gap-2 border border-ivory/20 px-4 py-2 text-[12px] uppercase tracking-[0.2em] text-ivory/80">

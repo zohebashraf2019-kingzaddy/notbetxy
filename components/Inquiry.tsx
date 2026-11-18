@@ -101,7 +101,7 @@ export default function Inquiry() {
         <div className="lg:col-span-5">
           <SectionHeading
             id="contact-title"
-            number="06"
+            number="07"
             kicker="Collaboration Inquiry"
             title={
               <>

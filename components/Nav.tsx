@@ -38,8 +38,8 @@ export default function Nav() {
           <span className="font-serif text-lg tracking-[0.2em]">NOTBETXY</span>
         </a>
 
-        <ul className="hidden items-center gap-8 lg:flex">
-          {nav.slice(1, 5).map((l) => (
+        <ul className="hidden items-center gap-7 xl:flex">
+          {nav.slice(1, 6).map((l) => (
             <li key={l.href}>
               <a href={l.href} className="link-underline text-[12px] uppercase tracking-[0.2em] text-ivory/80 hover:text-ivory">
                 {l.label}
@@ -65,7 +65,7 @@ export default function Nav() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="relative flex h-10 w-10 items-center justify-center lg:hidden"
+            className="relative flex h-10 w-10 items-center justify-center xl:hidden"
           >
             <span className={`absolute h-px w-6 bg-ivory transition-all duration-500 ${open ? "rotate-45" : "-translate-y-1.5"}`} />
             <span className={`absolute h-px w-6 bg-ivory transition-all duration-500 ${open ? "-rotate-45" : "translate-y-1.5"}`} />
@@ -81,7 +81,7 @@ export default function Nav() {
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.7, ease }}
-            className="fixed inset-0 top-0 -z-10 flex flex-col justify-between bg-ink px-6 pb-10 pt-28 lg:hidden"
+            className="fixed inset-0 top-0 -z-10 flex flex-col justify-between overflow-y-auto bg-ink px-6 pb-10 pt-28 xl:hidden"
           >
             <ul className="space-y-2">
               {nav.map((l, i) => (
@@ -94,7 +94,7 @@ export default function Nav() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="group flex items-baseline gap-4 py-1 font-serif text-[2.6rem] font-light leading-tight"
+                    className="group flex items-baseline gap-4 py-1 font-serif text-[2.2rem] font-light leading-tight"
                   >
                     <span className="font-sans text-[12px] tracking-[0.2em] text-champagne">0{i + 1}</span>
                     <span className="transition group-hover:italic group-hover:text-champagne">{l.label}</span>
